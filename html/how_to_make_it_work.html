@@ -26,16 +26,46 @@
                 nous allons commencer par paramétrer votre environnement</p>
 
             <h1>Guide d'installation </h1>
+                <h2>First things first</h2>
+                <p>
+                    Avant tout vérifiez que vous étes connectés à un réseau
+                    Wi-Fi fiable, puis ouvrez le Terminal
+                </p>
+                <figure>
+                    <img src="../images/open_terminal.jpg">
+                    <figcaption>Figure 1.1 - Ouverture du terminal sous Linux</figcaption>
+                </figure>
+                <p>
+                    Creer un dossier caché ".conserto" et tapez la commande
+                    suivante :
+                </p>
+                <pre>
+                    <samp>
+                        sudo apt-get update && sudo apt-get upgrade
+                    </samp>
+                </pre>
+                <p>
+                    Il vous faudra par la suite installer git, un
+                    gestionnaire de version très utile pour travailler en groupe.
+                    Mais je vous en parlerai en détail un peu plus bas ;)
+                    Pour l'instant tapez la commande :
+                </p>
+                <pre>
+                    <samp>
+                        sudo apt-get install git
+                    </samp>
+                </pre>
+
                 <h2>Terminator : votre ami !</h2>
                     <p>
                         Fini les fonds d'écrans en noir et blanc et l'écriture
                         illisible.Terminator est un terminal virtuel qui a
-                        la particularité de permettre de partager la fenêtre
-                        selon vos envies et ainsi organiser plus simplement
-                        vos différentes fenêtres.Comme vous allez être amené
-                        à vous logger sur le robot, lancer l'application sur
-                        ce dernier et voir les logs d'erreurs, je vous
-                        conseille fortement d'installer ce terminal.
+                        la particularité de permettre de scinder en plusieurs
+                        parties la fenêtre selon vos envies et ainsi organiser
+                        plus simplement vos différentes fenêtres. Comme vous
+                        allez être amené à vous logger sur le robot,
+                        lancer l'application sur ce dernier et voir les logs
+                        d'erreurs, je vous conseille fortement d'installer ce terminal.
                     </p>
                     <h3>Installation de Terminator</h3>
                         <pre>
@@ -86,7 +116,8 @@
                         Cependant le fonctionnement des options sur vim peuvent
                         être oublié dès que l'on quitte le logiciel. C'est pourquoi
                         il faut créer un fichier de configuration .vimrc dans votre
-                        répertoire personnel.
+                        répertoire personnel...Mais on a pensé à tout ! :)
+                        Plus besoin de faire de réglage
 
                 <h2>Z Shell</h2>
                     <h3>Présentation Zsh</h3>
@@ -148,6 +179,11 @@
                             </li>
                         </ol>
                     <h3>Installation du framework Oh my Zsh</h3>
+                        <p>
+                            Vous pouvez à présent personnaliser votre shell
+                            avec ce framework, car il contient une part importante
+                            de plugins que vous pouvez installer.
+                        </p>
                         <pre>
                             <samp>sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"</samp>
                         </pre>
