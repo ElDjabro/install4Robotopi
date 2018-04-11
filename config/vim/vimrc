@@ -1,22 +1,28 @@
-set nocompatible " be iMproved, required
-set mouse=a " Use mouse in vim
-filetype off " required
+set nocompatible                    " be iMproved, required
+set mouse=a                         " Use mouse in vim
+filetype off                        " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim' " let Vundle manage Vundle, required
-Plugin 'Valloric/YouCompleteMe' " A code-completion engine
-Plugin 'rdnetto/YCM-Generator' " Generate YCM file using :YcmGenerateConfig
-Plugin 'scrooloose/syntastic' " Syntax checking hacks
-Plugin 'majutsushi/tagbar' " displays tags in a window, ordered by scope
-Plugin 'jlanzarotta/bufexplorer' " convenient buffer explorer
-Plugin 'airblade/vim-gitgutter' " shows a git diff/stage/revert using sign column
-Plugin 'bling/vim-airline' " lean & mean status/tabline
-Plugin 'flazz/vim-colorschemes' " one colorscheme pack to rule them all!
-call vundle#end() " required
-filetype plugin indent on " required
-" :PluginInstall - installs plugins; append `!` to update or just :PluginUpdate
+Plugin 'gmarik/Vundle.vim'          " let Vundle manage Vundle, required
+Plugin 'rdnetto/YCM-Generator'      " Generate YCM file using :YcmGenerateConfig
+Plugin 'scrooloose/syntastic'       " Syntax checking hacks
+Plugin 'majutsushi/tagbar'          " displays tags in a window, ordered by scope
+Plugin 'jlanzarotta/bufexplorer'    " convenient buffer explorer
+Plugin 'airblade/vim-gitgutter'     " shows a git diff/stage/revert using sign column
+Plugin 'bling/vim-airline'          " lean & mean status/tabline
+Plugin 'flazz/vim-colorschemes'     " one colorscheme pack to rule them all!
+call vundle#end()                   " required
+
+filetype plugin indent on           " required
+
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
 colorscheme mouse | set background=dark | set guifont=DejaVu\ Sans\ Mono\ 10
 set number | set cursorline | set textwidth=80
