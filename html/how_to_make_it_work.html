@@ -12,7 +12,6 @@
             <nav>
 
             </nav>
-
             <h1>Bienvenue !</h1>
                 <p>Robotopiennes, Robotopiens,</br>
                 Bienvenue à vous au sein de Conserto et de l'équipe de robotique
@@ -36,8 +35,8 @@
                     <figcaption>Figure 1.1 - Ouverture du terminal sous Linux</figcaption>
                 </figure>
                 <p>
-                    Creer un dossier caché ".conserto" et tapez la commande
-                    suivante :
+                    Creer un dossier caché ".conserto" (mkdir ~/.conserto)
+                    et tapez la commande suivante :
                 </p>
                 <pre>
                     <samp>
@@ -117,7 +116,29 @@
                         être oublié dès que l'on quitte le logiciel. C'est pourquoi
                         il faut créer un fichier de configuration .vimrc dans votre
                         répertoire personnel...Mais on a pensé à tout ! :)
-                        Plus besoin de faire de réglage
+                        Plus besoin de faire de réglages
+                        Aller sans plus attendre dans le dossier "config" et taper
+                        ces commandes:
+                        <pre>
+                            <samp>
+                                cd config/vim
+                                chmod a+x install.sh
+                                sudo ./install.sh
+                            </samp>
+                        </pre>
+                        <p>
+                            patienter le temps de l'installation...
+                            Lorsque l'installation est complète (ie "Done" en
+                            bas de page).Pour sortir de Vundle appuyer sur la touche
+                            <a class="touche_clavier">esc</a> puis
+                            <a class="touche_clavier">q</a>.
+                            Enfin, pour sortir de l'editeur vim appuyer sur la touche
+                            <a class="touche_clavier">esc</a> pour etre en mode
+                            "Visuel" puis <a class="touche_clavier">:</a>
+                            <a class="touche_clavier">q</a> et appuyer sur
+                            <a class="touche_clavier">entrée</a>
+
+                        </p>
 
                 <h2>Z Shell</h2>
                     <h3>Présentation Zsh</h3>
@@ -156,13 +177,6 @@
                                     Vérifiez l'installation en saisissant :
                                 </p>
                                 <pre id="code">
-                                    <samp>zsh --version</samp>
-                                </pre>
-                                <p>
-                                    et obtenir la version 5.4.2</br>
-                                    On peut aussi taper la comande suivante :
-                                </p>
-                                <pre id="code">
                                     <samp>echo $(which zsh)</samp>
                                 </pre>
                                 <p> vous devriez voir afficher sur le terminal
@@ -185,7 +199,24 @@
                             de plugins que vous pouvez installer.
                         </p>
                         <pre>
-                            <samp>sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"</samp>
+                            <samp>
+                                sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+                            </samp>
+                        </pre>
+                    <h3>Personnalisation de votre shell<h3>
+                        <p>
+                            Dirigez-vous vers le dossier config/perso et modifiez
+                            les paramètres commentés dans le fichier gitconfig et
+                            zshrc. Vous y trouverez une liste non exhaustive de paramètres
+                            réglables.
+                            Lorsque que vous êtes sûr de vos changements tapez
+                            les commandes suivantes
+                        </p>
+                        <pre>
+                            <samp>
+                                chmod a+x install.sh
+                                sudo ./install.sh
+                            </samp>
                         </pre>
 
             <h2>Surveiller l'activité système de l'ordinateur avec Indicator-Multiload</h2>
@@ -201,6 +232,13 @@
                 <pre id="code">
                     <samp>sudo apt-get install indicator-multiload</samp>
                 </pre>
+            <h2>Monitorer votre systeme avec htop</h2>
+            <p>
+                htop....blablabla
+            </p>
+            <pre id="code">
+                <samp>sudo apt-get install htop</samp>
+            </pre>
         </div>
         <footer role="information robotopi" class="footer"></footer>
     </body>
