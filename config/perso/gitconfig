@@ -1,7 +1,7 @@
-[user]
-	name = votre_nom
-	email = prenom.nom1991@conserto.pro
-	username =
+#[user]
+#	name = votre_nom
+#	email = prenom.nom1991@conserto.pro
+#	username = your_username
 [core]
 	editor = vim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
