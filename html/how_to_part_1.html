@@ -24,7 +24,7 @@
                 projet déjà existant. Avant de rentrer plus loin dans les détails,
                 nous allons commencer par paramétrer votre environnement</p>
 
-            <h1>Guide d'installation </h1>
+            <h1>Guide d'installation d'outils </h1>
                 <h2>First things first</h2>
                 <p>
                     Avant tout vérifiez que vous étes connectés à un réseau
@@ -106,7 +106,7 @@
                         <p>
                             Je vous laisse regarder sur le site d'openclassroom
                             pour l'utilsation de Vim
-                            <a id="use_vim"
+                            <a id="use_vim" target="_blank"
                             href="https://openclassrooms.com/courses/reprenez-le-controle-a-l-aide-de-linux/vim-l-editeur-de-texte-du-programmeur">Utilisez Vim</a>
                         </p>
                     <h3>Configuration Vim</h3>
@@ -137,7 +137,6 @@
                             "Visuel" puis <a class="touche_clavier">:</a>
                             <a class="touche_clavier">q</a> et appuyer sur
                             <a class="touche_clavier">entrée</a>
-
                         </p>
 
                 <h2>Z Shell</h2>
@@ -154,44 +153,45 @@
                             pas m'aventurer là dedans. Neanmoins on peut citer les
                             principaux:</br>
                             <ul class="avantages_zsh">
-                                <li><strong>Autocomplétion</strong>avancée</li>
-                                <li><strong>Correction orthographique</strong>
-                                    des commandes saisies</li>
-                                <li>Support avancé de Git</li>
-                                <li><strong>Historique partagé<strong> entre les
-                                    différents Shell ouverts.</li>
+                                <li>
+                                    <strong>Autocomplétion</strong>avancée
+                                </li>
+                                <li>
+                                    <strong>Correction orthographique</strong>
+                                    des commandes saisies
+                                </li>
+                                <li>
+                                    Support avancé de Git
+                                </li>
+                                <li>
+                                    <strong>Historique partagé</strong> entre les
+                                    différents Shell ouverts.
+                                </li>
                             </ul>
                         </p>
-                    <h3>Installation Zsh et le mettre par défaut<h3>
-                        <ol class="install_manelle">
-                            <li>
-                                <p>
-                                    Pour installer Zsh, saisissez les commandes suivantes :
-                                </p>
-                                <pre id="code">
-                                    <samp>sudo apt-get install zsh</samp>
-                                </pre>
-                            </li>
-                            <li>
-                                <p>
-                                    Vérifiez l'installation en saisissant :
-                                </p>
-                                <pre id="code">
-                                    <samp>echo $(which zsh)</samp>
-                                </pre>
-                                <p> vous devriez voir afficher sur le terminal
-                                     /usr/local/bin/zsh
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    En faire son shell par défaut:
-                                </p>
-                                <pre>
-                                    <samp>sudo chsh -s $(which zsh)</samp>
-                                </pre>
-                            </li>
-                        </ol>
+                    <h3>Installation Zsh et le mettre par défaut</h3>
+                        <p>
+                            Pour installer Zsh, saisissez les commandes suivantes :
+                        </p>
+                        <pre id="code">
+                            <samp>sudo apt-get install zsh</samp>
+                        </pre>
+                        <p>
+                            Vérifiez l'installation en saisissant :
+                        </p>
+                        <pre id="code">
+                            <samp>echo $(which zsh)</samp>
+                        </pre>
+                        <p>
+                            vous devriez voir afficher sur le terminal
+                             /usr/local/bin/zsh
+                        </p>
+                        <p>
+                            En faire son shell par défaut:
+                        </p>
+                        <pre>
+                            <samp>sudo chsh -s $(which zsh)</samp>
+                        </pre>
                     <h3>Installation du framework Oh my Zsh</h3>
                         <p>
                             Vous pouvez à présent personnaliser votre shell
@@ -203,10 +203,10 @@
                                 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
                             </samp>
                         </pre>
-                    <h3>Personnalisation de votre shell<h3>
+                    <h3>Personnalisation de votre shell</h3>
                         <p>
                             Dirigez-vous vers le dossier config/perso et modifiez
-                            les paramètres commentés dans le fichier gitconfig et
+                            les paramètres commentés dans les fichiers gitconfig et
                             zshrc. Vous y trouverez une liste non exhaustive de paramètres
                             réglables.
                             Lorsque que vous êtes sûr de vos changements tapez
@@ -230,15 +230,42 @@
                     de commande depuis le Terminal.
                 </p>
                 <pre id="code">
-                    <samp>sudo apt-get install indicator-multiload</samp>
+                    <samp>
+                        sudo add-apt-repository ppa:indicator-multiload/stable-daily
+                        sudo apt-get update
+                        sudo apt-get install indicator-multiload
+                    </samp>
                 </pre>
             <h2>Monitorer votre systeme avec htop</h2>
             <p>
-                htop....blablabla
+                En plus d'un visuel agréable, htop donne un aperçu des processus actifs
+                sur notre système et vous permettra également de gérer ceux-ci
+                de façon interactive. Vous pourrez notamment :
+                    <ul>
+                        <li>
+                            Trier la liste des processus par critère
+                            (utilisation du processeur, de la mémoire,
+                            de la mémoire virtuelle et autres)
+                        </li>
+                        <li>
+                            Rechercher des processus
+                        </li>
+                        <li>
+                            Tuer des processus.
+                        </li>
+                    <ul>
             </p>
             <pre id="code">
                 <samp>sudo apt-get install htop</samp>
             </pre>
+            <p>
+                Comme vous aurez pu le constater il existe de nomvreuses
+                applications qui peuvent vous faciliter la vie, je vous conseille
+                de jeter un oeil <a href="#" target="_blank">ici</a> pour installer
+                d'autres Tools. Ceux cités précédemment sont des "must-have" mais
+                cela reste bien sûr à vous de voir. Je citerai tout de même Filezilla
+                et Synaptic, Gimp, Flash player, ainsi que BleachBit
+            </p>
         </div>
         <footer role="information robotopi" class="footer"></footer>
     </body>
