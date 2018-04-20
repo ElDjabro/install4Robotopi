@@ -50,9 +50,11 @@ then
         mv ~/Téléchargements/$chrgrph_exec ~/download
     else
         echo "Il manque un ou des dossier(s)..."
+        exit 1
     fi
 else
     echo "Veuillez choisir la langue en français"
+    exit 1
 fi
 
 cd ~/Téléchargements
