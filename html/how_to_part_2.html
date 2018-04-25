@@ -3,18 +3,32 @@
     <head>
         <meta charset="utf-8">
         <title>Day 01 @ Robotopi</title>
-        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../css/style.css">
     </head>
 
     <body class="Welcome Robotopi">
-
-        <div id="mainContent">
+        <h1>
+          Day One @ <img src="../images/logo.png">
+        </h1>
             <nav>
-
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid slice" viewBox="0 0 800 600">
+                <defs>
+                 <mask id="radioMask"></mask>
+                </defs>
+                <g id="mainGroup">
+                    <g id="circleGroup" fill="transparent" stroke-width="4" stroke-miterlimit="10" >
+                    <circle  cx="260" cy="300" r="23"/><a href="#welcome1"></a></circle>
+                    <circle  cx="330" cy="300" r="23"/><a href="#welcome2"></a></circle>
+                    <circle  cx="400" cy="300" r="23"/><a href="#welcome3"></a></circle>
+                    <circle  cx="470" cy="300" r="23"/><a href="#welcome4"></a></circle>
+                    <circle  cx="540" cy="300" r="23"/><a href="#welcome5"></a></circle>
+                    </g>
+                    <line id="joinLine" fill="none" stroke-width="20" stroke-linecap="round" stroke-miterlimit="10" x1="260" y1="300" x2="260" y2="300"/>
+                </g>
+                </svg>
             </nav>
-            <h1>Bienvenue !</h1>
-
-            <h1>Guide d'installation de l'environnement</h1>
+            <div id="mainContent">
+            <h2 id="welcome2 instal_env">Guide d'installation de l'environnement</h2>
                 <p>
                     Cette partie concerne maintenant l'installation d'outils
                     que vous utiliserez pour travailler sur votre machine et sur
@@ -44,11 +58,22 @@
                     À l'ouverture de votre deuxième terminal, le script createEnv.sh
                     est éxécuté.
                     Tapez successivement 1 (Unix Makefiles), 2 (QtCreator), Y (pour confirmer)
-
                 </p>
-
         </div>
+        <aside>
+            <h5><a href="#"></a>Premiers Pas<a href="#">></a></h5>
+            <ul>
+                <li><a href="#install_env">Guide d'installation de l'environnement</a></li>
+                <!-- <li><a href="">Terminator: votre ami !</a></li>
+                <li><a href="">Vim l'editeur de texte du super codeur</a></li>
+                <li><a href="">Z Shell</a></li>
+                <li><a href="">Indicator-Multiload</a></li>
+                <li><a href="">Monitorer votre systeme</a></li> -->
+            </ul>
+        </aside>
         <footer role="information robotopi" class="footer"></footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+        <script src="../js/nav.js"></script>
     </body>
 
 </html>

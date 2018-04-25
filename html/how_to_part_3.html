@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Day 01 @ Robotopi</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body class="Welcome Robotopi">
+        <h1>
+          Day One @ <img src="../images/logo.png">
+        </h1>
+            <nav>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid slice" viewBox="0 0 800 600">
+                <defs>
+                 <mask id="radioMask"></mask>
+                </defs>
+                <g id="mainGroup">
+                    <g id="circleGroup" fill="transparent" stroke-width="4" stroke-miterlimit="10" >
+                    <circle  cx="260" cy="300" r="23"/><a href="#welcome1"></a></circle>
+                    <circle  cx="330" cy="300" r="23"/><a href="#welcome2"></a></circle>
+                    <circle  cx="400" cy="300" r="23"/><a href="#welcome3"></a></circle>
+                    <circle  cx="470" cy="300" r="23"/><a href="#welcome4"></a></circle>
+                    <circle  cx="540" cy="300" r="23"/><a href="#welcome5"></a></circle>
+                    </g>
+                    <line id="joinLine" fill="none" stroke-width="20" stroke-linecap="round" stroke-miterlimit="10" x1="260" y1="300" x2="260" y2="300"/>
+                </g>
+                </svg>
+            </nav>
+            <div id="mainContent">
+            <h2 id="projet welcome3">Démarrer un projet</h2>
+                <p>
+                    Dans cette partie nous allons voir comment démarrer un nouveau
+                    projet.
+                    Pour commencer, rendez vous sur <a href="https://bitbucket.org" title="_blank">BitBucket</a>
+                    Connectez vous avec le login et mot de passe suivants :
+                    <ul>
+                        <li>
+                            <a href="#">labs@conserto.pro</a>
+                        </li>
+                        <li>
+                            ************
+                        </li>
+                    </ul>
+                </p>
+                <h3 id="bitbucket">Premiers pas sur Bitbucket</h3>
+                    <p>
+                        Bitbucket est un outil de gestion des dépôts de code source Git et Mercurial, sur serveur ou cloud.
+                        <figure>
+                            <img src="../images/OnBitbucket.png">
+                            <figcaption>Figure 3.1 - Accueil sur Bitbucket</figcaption>
+                        </figure>
+                        C'est ici que vous allez pouvoir récupérer et mettre à jour vos projets. Mais accéder aux dépots, vous devez tout d'abord générer une paire de clés SSH et partager la publique avec bitbucket. Pour plus d'informations sur les clés ssh et leur fonctionnemnt cliquez <a href="https://delicious-insights.com/fr/articles/comprendre-et-maitriser-les-cles-ssh/#et-git-dans-tout-a-" target="_blank">ici</a>
+                        Rendez vous sur l'onglet en bas à gauche et cliquez sur "View profile"
+                    </p>
+                    <figure>
+                        <img src="../images/bitbucket_viewprofile.png">
+                        <figcaption>Figure 3.2 - View profile</figcaption>
+                    </figure>
+                    <p>
+                        Après cela, cliquez sur l'onglet "Settings" puis sur "SSH keys"
+                    </p>
+                    <figure>
+                        <img src="../images/settings_sshKeys_bitbucket.png">
+                        <figcaption>Figure 3.3 - Settings SSH keys</figcaption>
+                    </figure>
+                    <p>
+                        <a href="https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html#SetupanSSHkey-ssh2" target="_blank">Générer votre clé SSH.</a></br>
+
+                        Lors de la génération de votre clé dans votre terminal (j'espère que vous avez télécharger terminator !), on vous demandera l'emplacement de votre clé.
+                        Vous laisserez celle par défaut en appuyant sur "Entrée".
+                        On vous demandera également un mot de passe, tapez "Entrée" pour ne pas en mettre ! puis tapez une deuxième fois sur "Entrée" pour confirmer.
+                    </p>
+                    <p>
+                        Ajouter ensuite votre clé sur bitbucket, en cliquant sur le bouton "Add key"
+                    </p>
+                    <figure>
+                        <img src="../images/add_key.png">
+                        <figcaption>Figure 3.4 - Ajouter une clé</figcaption>
+                    </figure>
+                    <p>
+                        Puis copiez-collez votre clé <strong>publique</strong>
+                    </p>
+                    <figure>
+                        <img src="../images/add_ssh_key.png">
+                        <figcaption>Figure 3.4 - Ajouter la clé ssh publique</figcaption>
+                    </figure>
+                    <p>
+                        Remplissez le champ "label" avec la première lettre de votre prenom et votre nom.
+                        Remarque au passage : Si vous avez plusieurs distributions,
+                        ajoutez à votre label un "_" suivi du nom de la ditribution.
+                        Exemple : mdjabri_ubuntu.
+                    </p>
+
+
+        </div>
+        <aside>
+            <h5><a href="#"><</a>Premiers pas sur bitbucket<a href="#">></a></h5>
+            <ul>
+                <li><a href="">Guide d'installation de l'environnement</a></li>
+                <!-- <li><a href="">Terminator: votre ami !</a></li>
+                <li><a href="">Vim l'editeur de texte du super codeur</a></li>
+                <li><a href="">Z Shell</a></li>
+                <li><a href="">Indicator-Multiload</a></li>
+                <li><a href="">Monitorer votre systeme</a></li> -->
+            </ul>
+        </aside>
+        <footer role="information robotopi" class="footer"></footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+        <script src="../js/nav.js"></script>
+    </body>
+
+</html>

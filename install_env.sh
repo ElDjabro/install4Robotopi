@@ -17,7 +17,7 @@ else
 fi
 
 #  Download Python SDK
-#  wget --no-check-certificate -P ~/download --user=robotique@consertotech.pro --password=Conserto01 https://community.ald.softbankrobotics.com/en/dl/ZmllbGRfY29sbGVjdGlvbl9pdGVtLTEyNDEtZmllbGRfc29mdF9kbF9leHRlcm5hbF9saW5rLTAtOGVlYTk3?width=500&height=auto --progress=bar:force 2>&1 | awk 'BEGIN{RS="\r"} /% / {printf $0  RS} END{print ""}'
+    #  wget --no-check-certificate -P ~/download --user=robotique@consertotech.pro --password=Conserto01 https://community.ald.softbankrobotics.com/en/dl/ZmllbGRfY29sbGVjdGlvbl9pdGVtLTEyNDEtZmllbGRfc29mdF9kbF9leHRlcm5hbF9saW5rLTAtOGVlYTk3?width=500&height=auto --progress=bar:force 2>&1 | awk 'BEGIN{RS="\r"} /% / {printf $0  RS} END{print ""}'
 
 #  Download C++ SDK
 #  wget --no-check-certificate -P ~/download --user=robotique@consertotech.pro --password=Conserto01 https://community.ald.softbankrobotics.com/en/dl/ZmllbGRfY29sbGVjdGlvbl9pdGVtLTEyNDUtZmllbGRfc29mdF9kbF9leHRlcm5hbF9saW5rLTAtZmU3ZTBi?width=500&height=auto --progress=bar:force 2>&1 | awk 'BEGIN{RS="\r"} /% / {printf $0  RS} END{print ""}'
@@ -35,7 +35,7 @@ cpp_sdk = naoqi-sdk*
 py_sdk = pynaoqi-python*
 chrgrph_exec = choregraphe-suite*
 
-echo "Verification de la langue..."
+echo " --------------------- Verification de la langue --------------------- "
 langue = $( locale | grep LANGUAGE | cut -d= -f2)
 
 if [ $langue = "fr_FR" ]
@@ -79,8 +79,8 @@ sudo ./conserto.sh
 
 gnome-terminal -e 'bash -c "cd /tmp/environmentinstallation;./createEnv.sh;"';
 
-# --------------- Clonage du repo Testenv ------------- #
-echo "Installation du repo TestEnv..."
+# ------------------------- Clonage du repo Testenv -------------------------- #
+echo " --------------------- Installation du repo TestEnv ---------------------"
 cd ~/Devel
 git clone git@bitbucket.org:consertoroboticteam/testenv.git
 cd testenv
@@ -88,8 +88,8 @@ sudo chmod a+x build.sh
 ./build.sh
 
 
-# --------------- Clonage du repo Simulator ------------- #
-echo "Installation du repo Simulator..."
+# -------------------------- Clonage du repo Simulator ----------------------- #
+echo " ------------------- Installation du repo Simulator ----------------------"
 cd ~/Devel
 git clone git@bitbucket.org:consertoroboticteam/simulator.git
 

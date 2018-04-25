@@ -28,7 +28,7 @@
                 </svg>
             </nav>
             <div id="mainContent">
-                <h2 id="welcome">Bienvenue !</h2>
+                <h2 id="welcome_1">Bienvenue !</h2>
                     <p>
                         Robotopiennes, Robotopiens,</br>
                         Bienvenue à vous au sein de Conserto et de l'équipe de robotique
@@ -41,19 +41,11 @@
                         projet déjà existant. Avant de rentrer plus loin dans les détails,
                         nous allons commencer par paramétrer votre environnement.
                     </p>
-                <h2>Guide d'installation d'outils</h2>
+                <h2 id="install_tools">Guide d'installation d'outils</h2>
                     <h3>First things first</h3>
                         <p>
                             Avant tout vérifiez que vous étes connectés à un réseau
-                            Wi-Fi fiable, puis ouvrez le Terminal
-                        </p>
-                        <figure>
-                            <img src="../images/open_terminal.jpg">
-                            <figcaption>Figure 1.1 - Ouverture du terminal sous Linux</figcaption>
-                        </figure>
-                        <p>
-                            Creer un dossier caché ".conserto" (mkdir ~/.conserto)
-                            et tapez la commande suivante :
+                            Wi-Fi fiable, puis ouvrez le Terminal.
                         </p>
                         <pre>
                             <samp>
@@ -104,7 +96,7 @@
                             <span>~/.config/terminator/config</span> (s'il
                             n'existe pas il suffit de le créer)
                         </p>
-                <h2>Vim l'editeur de texte du super codeur</h2>
+                <h2 id="vim">Vim l'editeur de texte du super codeur</h2>
                     <p>
                         L'éditeur de texte est un outil de base sous Linux.
                         Il sert notamment à modifier les fichiers de
@@ -119,13 +111,22 @@
                         <pre>
                             <samp>sudo apt-get install vim</samp>
                         </pre>
-                    <h3>Utilisation de Vim</h3>
+
+                    <h3>Utilisation de Vim et quelques commandes utiles</h3>
                         <p>
-                            Je vous laisse regarder sur le site d'openclassroom
+                            En <strong>mode commande</strong>, voici les commandes à retenir :
+                            <ul>
+                                <li>":q" pour quitter (":q!", pour forcer à quitter) l'éditeur</li>
+                                <li>":w" pour sauvegarder</li>
+                                <li>":wq" <==> ":x" pour sauvegarder et quitter</li>
+                                <li>":i" pour passer en mode insertion</li>
+                            </ul>
+                            Pour plus de détails je vous laisse regarder sur le site d'openclassroom
                             pour l'utilsation de Vim
                             <a id="use_vim" target="_blank"
                             href="https://openclassrooms.com/courses/reprenez-le-controle-a-l-aide-de-linux/vim-l-editeur-de-texte-du-programmeur">Utilisez Vim</a>
                         </p>
+
                     <h3>Configuration Vim</h3>
                         Vous pouvez configurer votre éditeur préféré en lançant
                         des commandes et certaines options méritent d'être activés.
@@ -156,7 +157,7 @@
                             <a class="touche_clavier">entrée</a>
                         </p>
 
-                <h2>Z Shell</h2>
+                <h2 id="zsh">Z Shell</h2>
                     <h3>Présentation Zsh</h3>
                         <p>
                             Très souvent lorsque l'on parle de programmation sur
@@ -164,14 +165,13 @@
                             shells, terminaux et de ligne de commandes.
                             Le shell le plus répendu et par défaut sur linux reste
                             <a href="#bash">Bash</a> mais il existe d'autres
-                            variantes aussi bien utilisés comme
-                            <a href="#zsh">Zsh</a> ou Z Shell.</br>
+                            variantes aussi bien utilisés comme Zsh ou Z Shell.</br>
                             Les avantages du Z Shell sont nombreuses mais je ne vais
                             pas m'aventurer là dedans. Neanmoins on peut citer les
                             principaux:</br>
                             <ul class="avantages_zsh">
                                 <li>
-                                    <strong>Autocomplétion</strong>avancée
+                                    <strong>Autocomplétion</strong> avancée
                                 </li>
                                 <li>
                                     <strong>Correction orthographique</strong>
@@ -201,7 +201,7 @@
                         </pre>
                         <p>
                             vous devriez voir afficher sur le terminal
-                             /usr/local/bin/zsh
+                             /usr/bin/zsh
                         </p>
                         <p>
                             En faire son shell par défaut:
@@ -236,7 +236,7 @@
                             </samp>
                         </pre>
 
-            <h2>Surveiller l'activité système de l'ordinateur avec Indicator-Multiload</h2>
+            <h2 id="indicator">Surveiller l'activité système de l'ordinateur avec Indicator-Multiload</h2>
                 <p>
                     Permet de voir en direct la charge des processeurs,
                     l'occupation en mémoire vive, l'activité de la connexion
@@ -253,7 +253,7 @@
                         sudo apt-get install indicator-multiload
                     </samp>
                 </pre>
-            <h2>Monitorer votre systeme avec htop</h2>
+            <h2 id="htop">Monitorer votre systeme avec htop</h2>
                 <p>
                     En plus d'un visuel agréable, htop donne un aperçu des processus actifs
                     sur notre système et vous permettra également de gérer ceux-ci
@@ -276,23 +276,23 @@
                     <samp>sudo apt-get install htop</samp>
                 </pre>
                 <p>
-                    Comme vous aurez pu le constater il existe de nomvreuses
-                    applications qui peuvent vous faciliter la vie, je vous conseille
-                    de jeter un oeil <a href="#" target="_blank">ici</a> pour installer
-                    d'autres Tools. Ceux cités précédemment sont des "must-have" mais
-                    cela reste bien sûr à vous de voir. Je citerai tout de même Filezilla
-                    et Synaptic, Gimp, Flash player, ainsi que BleachBit
+                    Voilà je crois avoir fait le tour des applications.
+                    Comme vous aurez pu le constater il en existe de nombreuses
+                    qui peuvent vous faciliter la vie.
+                    Ceux cités précédemment sont des "must-have" mais
+                    cela reste bien sûr à vous de voir. Je citerai tout de même
+                    Filezilla, Synaptic, Gimp, Flash player, ainsi que BleachBit.
                 </p>
             </div>
             <aside>
                 <h5><a href="#"><</a>Premiers Pas<a href="#">></a></h5>
                 <ul>
-                    <li><a href="">Guide d'installation</a></li>
-                    <li><a href="">Terminator: votre ami !</a></li>
-                    <li><a href="">Vim l'editeur de texte du super codeur</a></li>
-                    <li><a href="">Z Shell</a></li>
-                    <li><a href="">Indicator-Multiload</a></li>
-                    <li><a href="">Monitorer votre systeme</a></li>
+                    <li><a href="#install_tools">Guide d'installation</a></li>
+                    <li><a href="#terminator">Terminator: votre ami !</a></li>
+                    <li><a href="#vim">Vim l'editeur de texte du super codeur</a></li>
+                    <li><a href="#zsh">Z Shell</a></li>
+                    <li><a href="#indicator">Indicator-Multiload</a></li>
+                    <li><a href="#htop">Monitorer votre systeme</a></li>
                 </ul>
             </aside>
             <footer role="information robotopi" class="footer"></footer>
