@@ -47,7 +47,7 @@ circle{
 aside {
   float: right;
   width: 20%;
-  position: fixed;
+  position: absolute;
   right:5%;
   top: 200px;
   background-color:#f0f0f0;

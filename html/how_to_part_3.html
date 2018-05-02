@@ -30,7 +30,7 @@
             <div id="mainContent">
             <h2 id="projet welcome3">Démarrer un projet</h2>
                 <p>
-                    Dans cette partie nous allons voir comment démarrer un nouveau
+                    Dans cette rubrique nous allons voir comment démarrer un nouveau
                     projet.
                     Pour commencer, rendez vous sur <a href="https://bitbucket.org" title="_blank">BitBucket</a>
                     Connectez vous avec le login et mot de passe suivants :
@@ -47,7 +47,7 @@
                     <p>
                         Bitbucket est un outil de gestion des dépôts de code source Git et Mercurial, sur serveur ou cloud.
                         <figure>
-                            <img src="../images/OnBitbucket.png">
+                            <img src="../images/on_bitbucket.png">
                             <figcaption>Figure 3.1 - Accueil sur Bitbucket</figcaption>
                         </figure>
                         C'est ici que vous allez pouvoir récupérer et mettre à jour vos projets. Mais accéder aux dépots, vous devez tout d'abord générer une paire de clés SSH et partager la publique avec bitbucket. Pour plus d'informations sur les clés ssh et leur fonctionnemnt cliquez <a href="https://delicious-insights.com/fr/articles/comprendre-et-maitriser-les-cles-ssh/#et-git-dans-tout-a-" target="_blank">ici</a>
@@ -91,6 +91,84 @@
                         ajoutez à votre label un "_" suivi du nom de la ditribution.
                         Exemple : mdjabri_ubuntu.
                     </p>
+                <h3 id="projet">Projet Empty_App ou Existant?</h3>
+                    <p>
+                        Maintenant que votre environnement est prêt. Nous allons pouvoir commmencer les
+                        choses sérieuses.
+                        Selon le projet qui vous sera affecté, c'est-à-dire l'application que vous
+                        devrez réaliser pour le client, vous serez toujours ammenés à partir d'une base existante. Reste à définir quel type de projet vous conviendra le mieux.
+                        En règle général, on vous le dira explicitement. Mais dans le cas contraire sachez que vous avez deux possibilités:
+                            <ul>
+                                <li> Vous développez une nouvelle application qui peut comporter ou non un nouveau sous module et dans ce cas vous partirez du projet nommé "empty_app" dans bitbucket</li>
+                                <li> Vous développez une application qui ressemble à une application existante. Dans ce cas là vous allez "forker" l'application existante</li>
+                            </ul>
+                    </p>
+                <h3 id="empty_app">Projet Empty App</h3>
+                    <p>
+                        Aucune application déjà réalisée ne comporte de sous modules dont vous avez besoin ou ne ressemble à celle que vous devez faire, alors vous devez partir d'un projet vide!
+                        <span>empty_app</span> est constitué d'éléments de base pour effectué une application. Voyons ensemble de quoi elle est constituée.
+                    </p>
+                    <figure>
+                        <img src="../images/empty_app.png">
+                        <figcaption>Figure 3.4 - Projet empty app</figcaption>
+                    </figure>
+                    <p>
+                        Empty app est une application dont le framework est constitué d'éléments de base.
+                        Elle comporte:
+                        <ul>
+                             <li> Un dossier "dialog" où sont rangés les topics (C'est dans un fichier .top que vous écrirez les <a href="http://doc.aldebaran.com/2-5/naoqi/interaction/dialog/aldialog_syntax_overview.html?highlight=topics">règles</a> pour doter votre robot d'une habilité à dialoguer en vous aidant des concepts déjà écrits )</li>
+                             <li> Un dossier templating/data qui comporte deux fichiers .json nécessaires à l'utilisation de vos "routines"</li>
+                             <li> Un dossier html qui sera utilisé pour l'affichage de la tablette </li>
+                             <li> Un dossier libs où vous trouverez le main.py</li>
+                             <li> Un dossier module_core qui est composé de fonctionnalités importantes du robot (Scheduler.py, poeple_perception.py, services_handler.py, services_instanciation.py, services_launcher.py etc...)</li>
+                             <li> Un dossier module_menu </li>
+                             <li> Un fichier manifest.xml. Vous en avez besoin pour rendre votre Application  sous forme de .pkg</li>
+                         </ul>
+                    </p>
+                <h3 id="existing_project">Projet existant</h3>
+                    <p>
+                        Des applications, il y en a pleins!
+                        Si vous devez repartir d'un projet existant, trouvez celui qui sera le plus adapté.
+                        Ces applications sont composés des fonctionnalités de base que l'on retrouve dans empty_app mais avec des modules supplémentaires.
+                        On pourra donc trouver:
+                        <ul>
+                            <li>Lilly_app qui est composée d'un menu général qui comporte un module de satisfaction, (enquête de satisfaction), un module posture (module pour faire un selfie avec Pepper), un module show_video (integration de vidéos)</li>
+                            <li>Socoda, Niort_numeric_selfie_app ou innovhealth_selfie_app qui est sont des  applications dont l'unique but est de faire des selfies. (Souvent utilisés pour des conventions/events donc pas besoin de menu principal).</li>
+                            <li>Klepierre...</li>
+                            <li>Elior_lab est une application complète qui comporte deux enquêtes de satisfaction, un module selfie, un module présentation (présentation de l'entreprise du client), un module plan (affichage d'un plan + dialogue), un module video</li>
+                            <li>InnovHealth</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Voilà pour ce qui est des applications utilisable pour réaliser vos projets.
+                    </p>
+                <h3 id="practice">Un peu de pratique</h3>
+                    <p>
+                        C'est bien beau tout ce discours Mohamed, mais comment on s'y prends concrètement ?!
+                        Eh bien mes chers robotopiens ne soyez pas si préssé car c'est là qu'arrive le plus dur croyez moi. Premièrement vous avez besoin de "forker" le projet. Pour cela rien de très compliquer. Prenons l'exemple d'Elior_lab...
+                        Allez sur la barre de recherche sur bitbucket et tapez "elior_lab" puis cliquez dessus.
+                        Puis dans la barre de recherche de votre navigateur, effacer le contenu écrit avant elior_lab/ et rajoutez le mot fork comme suit:
+                    </p>
+                    <figure>
+                        <img src="../images/elior_lab_fork.png">
+                        <figcaption>Figure 3.4 - Projet empty app</figcaption>
+                    </figure>
+                    <p>
+                        Vous serez reconduit sur la page suivante, où vous devrez changer l'Owner et choisir "consertoroboticteam". Dans l'onglet Project, choisissez "Applications" et modifier le nom de l'application. Après cela, il ne vous reste plus qu'à cliquer sur l'onglet "Fork repository" et votre projet sera crée.
+                    </p>
+                    <figure>
+                        <img src="../images/fork.png">
+                        <figcaption>Figure 3.4 - Projet empty app</figcaption>
+                    </figure>
+                    <p>
+                        Il ne vous reste plus qu'à aller rechercher votre projet et "git cloner" votre repository dans votre répertoire de travail.
+                    </p>
+                    <figure>
+                        <img src="../images/clone.png">
+                        <figcaption>Figure 3.4 - Projet empty app</figcaption>
+                    </figure>
+
+
 
 
         </div>
